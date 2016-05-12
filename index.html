@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+	<link rel="stylesheet" href="editor/css/editor.css" />
+    <link rel="stylesheet" href="editor/css/jquery.cleditor.css" />
+    <link rel="stylesheet" href="editor/css/bootstrap.button.css" />
+	<script src="editor/js/jquery.min.js"></script>
+    <script src="editor/js/jquery.cleditor.js"></script>
+    <script src="editor/js/FileSaver.min.js"></script>
+	<script>
+		var options = 
+		{
+			width: 'auto',
+			height: '500px',
+			bgColor: '#cdb396'
+		};
+		$(document).ready(function () {$("#input").cleditor(options); });
+	</script>
+</head>
+<body>
+    <div>
+        <h1>MZMobileHtmlEditor<span style="font-size:20px"> - Based on Cleditor (推荐使用Chrome浏览器)</span></h1>
+    </div>
+    <div>
+		<input id="BtnSave" class="button button-glow button-rounded button-raised button-primary" type="button" name="Save" value="保存到磁盘"/>
+		<input id="BtnCopy" class="button  button-border button-rounded button-primary" type="button" name="Copy" value="拷贝"/>
+		<span class="file-box">
+		<input type='button' class='button  button-border button-rounded button-primary' value='导入' /> 
+		<input id="BtnFile" type="file" class="file" onchange="upload(this)" multiple accept='text/html'/>
+		</span> 
+    </div>  
+    <br />
+    <textarea id="input" name="input"></textarea>
+	
+	<footer><a href="mailto:auchan129@foxmail.com">使用时遇到问题？</a></footer>
+	
+	<script src="editor/js/editor.js"></script>
+</body>
+</html>
